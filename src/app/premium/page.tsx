@@ -84,10 +84,12 @@ export default function PremiumCourses() {
           <div className="max-w-md mx-auto pt-8 border-t border-border mt-8">
             <div className="bg-white border border-border shadow-sm rounded-xl p-8 flex flex-col items-center">
               <div className="flex items-center space-x-3 mb-2">
-                <span className="text-lg text-gray-400 line-through font-medium">₩ 220,000</span>
-                <span className="bg-red-100 text-red-600 text-sm font-bold px-2.5 py-1 rounded-md tracking-wide">55% OFF</span>
+                <span className="text-lg text-gray-400 line-through font-medium">299,000원</span>
+                <span className="bg-red-100 text-red-600 text-sm font-bold px-2.5 py-1 rounded-md tracking-wide">67%</span>
               </div>
-              <h3 className="text-4xl font-extrabold text-text-main mb-2">₩ 99,000</h3>
+              <h3 className="text-4xl font-extrabold text-text-main mb-2">
+                99,000<span className="text-lg font-medium text-text-muted ml-1">원</span>
+              </h3>
               <p className="text-sm text-text-muted mb-8 text-center">모든 프리미엄 혜택과 1주일 밀착 케어 포함</p>
               
               <button 
