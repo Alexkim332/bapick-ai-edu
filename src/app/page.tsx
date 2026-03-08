@@ -18,14 +18,14 @@ export default function Home() {
               밀착 케어로 확실하게.
             </h1>
             <p className="text-lg text-text-muted max-w-2xl mx-auto md:mx-0">
-              강의만 듣고 끝나는 것이 아닙니다. 1주일 밀착 과제와 직접 Q&A를 통해 실제 수익화 파이프라인을 완성해 드립니다.
+              단순한 강의 수강이 아닙니다. 일주일 동안 매일 제공되는 학습 자료와 영상을 보고 챌린지 과제를 수행하며, 비개발자도 웹사이트를 직접 개발할 수 있는 실무 능력을 완벽하게 갖추게 해드립니다.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="/premium"
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl text-white bg-primary hover:bg-primary-hover shadow-sm transition-colors"
               >
-                커리큘럼 보기
+                챌린지 커리큘럼 보기
               </Link>
             </div>
           </div>
@@ -36,12 +36,12 @@ export default function Home() {
               {/* Optional background decoration */}
               <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-blue-50 opacity-50 blur-2xl"></div>
               
-              <h3 className="text-xl font-bold text-text-main mb-2 relative z-10 text-center">AI 자동화 설계자 1:1 밀착 코스</h3>
-              <p className="text-sm text-primary font-semibold mb-6 relative z-10">이번 기수에만 제공되는 특별 할인</p>
+              <h3 className="text-xl font-bold text-text-main mb-2 relative z-10 text-center">AI 자동화 설계자 1주일 밀착 챌린지</h3>
+              <p className="text-sm text-primary font-semibold mb-6 relative z-10">1기 챌린저 모집 중! 특별 할인가</p>
               
               <div className="flex items-center space-x-3 mb-2 relative z-10">
-                <span className="text-lg text-gray-400 line-through font-medium">220,000원</span>
-                <span className="text-sm font-bold px-2.5 py-1 bg-red-100 text-red-600 rounded-md tracking-wide">55% OFF</span>
+                <span className="text-lg text-gray-400 line-through font-medium">299,000원</span>
+                <span className="text-sm font-bold px-2.5 py-1 bg-red-100 text-red-600 rounded-md tracking-wide">67%</span>
               </div>
               
               <div className="text-4xl font-extrabold text-text-main mb-6 flex items-baseline relative z-10">
@@ -51,15 +51,19 @@ export default function Home() {
               <ul className="text-sm text-text-muted mb-8 space-y-4 w-full px-2 relative z-10">
                 <li className="flex items-center">
                   <span className="text-green-500 mr-3 text-lg">✅</span> 
-                  <span className="font-medium text-text-main">체계적인 4주 커리큘럼 VOD</span>
+                  <span className="font-medium text-text-main">체계적인 1주일 학습자료 & 영상 제공</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-500 mr-3 text-lg">✅</span> 
-                  <span className="font-medium text-text-main">1주일 과제 밀착 점검</span>
+                  <span className="font-medium text-text-main">챌린지 과제 밀착 피드백</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-500 mr-3 text-lg">✅</span> 
-                  <span className="font-medium text-text-main">무제한 1:1 Q&A 지원</span>
+                  <span className="font-medium text-text-main">비밀 카톡방 초대 & 밀착 멘토링</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-lg">✅</span> 
+                  <span className="font-medium text-text-main">비개발자도 웹사이트 개발 완수</span>
                 </li>
               </ul>
 
@@ -67,7 +71,7 @@ export default function Home() {
                 href="/premium"
                 className="w-full inline-flex items-center justify-center py-4 border border-transparent text-lg font-bold rounded-xl text-white bg-primary hover:bg-primary-hover shadow-md transition-colors relative z-10"
               >
-                1주일 밀착 케어 시작하기
+                챌린지 신청하기
               </Link>
             </div>
           </div>
@@ -79,7 +83,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl">
-              bapick ai edu만의 차별점
+              Bapick AI Edu 챌린지만의 특별함
             </h2>
             <p className="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
               오직 성과를 위한 3가지 확실한 교육 철학을 제공합니다.
@@ -92,9 +96,9 @@ export default function Home() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-primary mb-6">
                 <BookOpen className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-text-main mb-3">체계적인 커리큘럼</h3>
+              <h3 className="text-xl font-bold text-text-main mb-3">1주일 단기 완성 로드맵</h3>
               <p className="text-text-muted leading-relaxed">
-                기초부터 실무 적용까지 단계별로 구성된 검증된 로드맵을 통해 누구나 쉽게 학습할 수 있습니다.
+                기초부터 실무 적용까지 단계별 자료와 영상으로 구성된 일주일 로드맵을 통해 단기간에 마스터할 수 있습니다.
               </p>
             </div>
 
@@ -103,9 +107,9 @@ export default function Home() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-primary mb-6">
                 <Calendar className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-text-main mb-3">1주일 밀착 과제 케어</h3>
+              <h3 className="text-xl font-bold text-text-main mb-3">챌린지 과제 & 꼼꼼한 피드백</h3>
               <p className="text-text-muted leading-relaxed">
-                단순한 영상 시청을 넘어, 직접 적용해보는 주간 과제와 꼼꼼한 피드백으로 실력을 끌어올립니다.
+                단순한 시청을 넘어, 직접 적용해보는 매일의 챌린지 과제와 멘토의 꼼꼼한 피드백으로 실력을 끌어 올립니다.
               </p>
             </div>
 
@@ -114,9 +118,9 @@ export default function Home() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-primary mb-6">
                 <MessageCircleQuestion className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-text-main mb-3">직접 Q&A 지원</h3>
+              <h3 className="text-xl font-bold text-text-main mb-3">비밀 카톡방 초대 & 밀착 멘토링</h3>
               <p className="text-text-muted leading-relaxed">
-                막히는 부분이 있다면 언제든 질문하세요. 현업 전문가가 직접 빠르고 명확한 답변을 제공합니다.
+                막히는 부분이 있다면 비밀 카톡방에서 언제든 질문하세요. 멘토가 직접 빠르고 명확한 답변과 밀착 멘토링을 제공합니다.
               </p>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { createClient } from '@/utils/supabase/server';
 import { logout } from '@/app/login/actions';
 
@@ -10,20 +11,24 @@ export default async function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
-          <Link href="/" className="text-xl font-bold tracking-tight text-primary">
-            bapick ai edu
+          <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <Image 
+              src="/logo.png" 
+              alt="Bapick AI Edu Logo" 
+              width={200} 
+              height={48} 
+              className="h-10 md:h-12 w-auto object-contain" 
+              priority
+            />
           </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/free" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-            무료 강의
+          <Link href="/guidebook" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">
+            무료 가이드북
           </Link>
           <Link href="/premium" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-            유료 강의
-          </Link>
-          <Link href="/guidebook" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-            가이드북
+            챌린지 신청
           </Link>
         </nav>
 

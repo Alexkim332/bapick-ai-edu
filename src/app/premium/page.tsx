@@ -7,6 +7,12 @@ import { useState } from "react";
 export default function PremiumCourses() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<"bank" | "card">("bank");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = () => {
+    // TODO(Backend): Prepare for notification/email dispatch with secret KakaoTalk group code upon payment verification
+    setIsSubmitted(true);
+  };
 
   const handleCopyAccount = () => {
     navigator.clipboard.writeText("123-456-789012");
@@ -112,17 +118,39 @@ export default function PremiumCourses() {
 
             {/* Modal Body */}
             <div className="p-6">
-              {/* Order Summary */}
-              <div className="mb-8">
-                <div className="text-sm text-text-muted mb-1">강의명</div>
-                <div className="font-semibold text-text-main mb-4">AI 자동화 설계자 1:1 밀착 코스</div>
-                <div className="flex items-end justify-between pb-4 border-b border-border">
-                  <div className="text-sm text-text-muted">최종 결제 금액</div>
-                  <div className="text-3xl font-bold text-red-500 tracking-tight">99,000원</div>
+              {isSubmitted ? (
+                <div className="animate-in fade-in slide-in-from-bottom-2 duration-200 text-center py-8">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                    <CheckCircle2 className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-text-main mb-2">신청이 완료되었습니다!</h3>
+                  <p className="text-sm text-text-muted mb-6">
+                    결제 확인 후, 가입하신 연락처로 <br/>
+                    <strong>밀착 지원을 위한 비밀 카카오톡 톡방 입장 코드</strong>를 발송해 드립니다.
+                  </p>
+                  <button 
+                    onClick={() => {
+                      setIsModalOpen(false);
+                      setIsSubmitted(false);
+                    }}
+                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary-hover transition-colors"
+                  >
+                    확인
+                  </button>
                 </div>
-              </div>
+              ) : (
+                <>
+                  {/* Order Summary */}
+                  <div className="mb-8">
+                    <div className="text-sm text-text-muted mb-1">강의명</div>
+                    <div className="font-semibold text-text-main mb-4">AI 자동화 설계자 1주일 밀착 챌린지</div>
+                    <div className="flex items-end justify-between pb-4 border-b border-border">
+                      <div className="text-sm text-text-muted">최종 결제 금액</div>
+                      <div className="text-3xl font-bold text-red-500 tracking-tight">99,000원</div>
+                    </div>
+                  </div>
 
-              {/* Payment Methods */}
+                  {/* Payment Methods */}
               <div className="mb-6">
                 <h3 className="text-sm font-medium text-text-main mb-3">결제 수단 선택</h3>
                 <div className="space-y-3">
@@ -198,12 +226,12 @@ export default function PremiumCourses() {
                         </div>
                       </div>
                     </div>
-                    <Link
-                      href="#"
+                    <button
+                      onClick={handleSubmit}
                       className="flex w-full items-center justify-center py-4 border border-transparent text-base font-bold rounded-xl text-white bg-text-main hover:bg-black transition-colors shadow-sm"
                     >
                       입금 완료 후 수강 승인 요청하기
-                    </Link>
+                    </button>
                   </div>
                 ) : (
                   <div className="animate-in fade-in slide-in-from-bottom-2 duration-200">
@@ -216,6 +244,8 @@ export default function PremiumCourses() {
                   </div>
                 )}
               </div>
+            </>
+            )}
             </div>
           </div>
         </div>
