@@ -13,7 +13,7 @@ export default async function Header() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
             <Image 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="Bapick AI Edu Logo" 
               width={200} 
               height={48} 

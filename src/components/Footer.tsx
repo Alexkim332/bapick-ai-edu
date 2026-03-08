@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start gap-4">
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
             <Image 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="Bapick AI Edu Logo" 
               width={200} 
               height={48} 
