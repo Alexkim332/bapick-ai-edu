@@ -147,8 +147,14 @@ export default function PremiumCourses() {
                     <div className="text-sm text-text-muted mb-1">강의명</div>
                     <div className="font-semibold text-text-main mb-4">AI 자동화 설계자 1주일 밀착 챌린지</div>
                     <div className="flex items-end justify-between pb-4 border-b border-border">
-                      <div className="text-sm text-text-muted">최종 결제 금액</div>
-                      <div className="text-3xl font-bold text-red-500 tracking-tight">99,000원</div>
+                      <div className="text-sm text-text-muted mb-1">최종 결제 금액</div>
+                      <div className="flex flex-col items-end">
+                        <div className="flex items-center space-x-2 mb-1">
+                          <span className="text-sm text-gray-400 line-through font-medium">299,000원</span>
+                          <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-md tracking-wide">67%</span>
+                        </div>
+                        <div className="text-3xl font-bold text-red-500 tracking-tight">99,000원</div>
+                      </div>
                     </div>
                   </div>
 
