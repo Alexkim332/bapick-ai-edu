@@ -34,11 +34,12 @@ export async function signup(formData: FormData) {
   const { error } = await supabase.auth.signUp(data)
 
   if (error) {
-    redirect('/signup?errorMessage=' + encodeURIComponent(error.message))
+    redirect('/login?errorMessage=' + encodeURIComponent(error.message))
   }
 
+  // Assuming email confirmations are turned off in Supabase config
   revalidatePath('/', 'layout')
-  redirect('/login?message=' + encodeURIComponent('회원가입이 완료되었습니다. 이메일을 확인해 주세요 (또는 로그인해 주세요).'))
+  redirect('/')
 }
 
 export async function logout() {

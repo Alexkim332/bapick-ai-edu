@@ -6,6 +6,7 @@ import { logout } from '@/app/login/actions';
 export default async function Header() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
+  const emailPrefix = user?.email ? user.email.split('@')[0] : '';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm">
@@ -35,12 +36,9 @@ export default async function Header() {
         <div className="flex items-center gap-4">
           {user ? (
             <>
-              <Link 
-                href="/mypage" 
-                className="hidden sm:inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors text-text-main hover:text-primary"
-              >
-                마이페이지
-              </Link>
+              <span className="hidden sm:inline-flex items-center justify-center text-sm font-bold text-primary">
+                {emailPrefix}님 환영합니다
+              </span>
               <form action={logout}>
                 <button 
                   type="submit"
@@ -59,7 +57,7 @@ export default async function Header() {
                 로그인
               </Link>
               <Link 
-                href="/signup" 
+                href="/login?tab=signup" 
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-primary-hover transition-colors"
               >
                 회원가입
