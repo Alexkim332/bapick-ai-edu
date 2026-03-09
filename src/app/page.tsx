@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Calendar, MessageCircleQuestion, ArrowRight } from "lucide-react";
+import { BookOpen, Calendar, MessageCircleQuestion, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Home() {
   return (
@@ -126,6 +126,182 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section 1: Pain Points & Value Proposition */}
+      <section className="w-full bg-gray-50 py-20 md:py-24 border-t border-border">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">
+            진짜 &apos;바이브 코딩&apos;이 무엇인지, 이론-실습-배포까지 한 번에!
+          </h2>
+          <p className="text-lg text-gray-600 mb-12">
+            AI 코딩, 말로만 듣고 아직 시작 못 하셨나요? 지금 아래와 같은 고민을 하고 계시다면 주목해 주세요.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
+              <span className="text-red-400 flex-shrink-0 mt-0.5"><CheckCircle2 className="w-6 h-6" /></span>
+              <p className="text-gray-700 font-medium">개발의 &apos;개&apos;자도 모르는데 웹사이트를 만들 수 있을까?</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
+              <span className="text-red-400 flex-shrink-0 mt-0.5"><CheckCircle2 className="w-6 h-6" /></span>
+              <p className="text-gray-700 font-medium">강의는 많이 들었는데, 막상 내 서비스는 하나도 없어요…</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
+              <span className="text-red-400 flex-shrink-0 mt-0.5"><CheckCircle2 className="w-6 h-6" /></span>
+              <p className="text-gray-700 font-medium">혼자 영상을 보려니 자꾸 미루게 되고 의욕이 안 납니다ㅠㅠ</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
+              <span className="text-red-400 flex-shrink-0 mt-0.5"><CheckCircle2 className="w-6 h-6" /></span>
+              <p className="text-gray-700 font-medium">코딩 없이 텍스트만 쳐서 홈페이지를 배포하고 싶어요!</p>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 shadow-sm">
+            <p className="text-xl font-bold text-gray-900 leading-relaxed">
+              <span className="text-primary">강의만 듣고 끝나는 뻔한 교육이 아닙니다.</span><br />
+              딱 5일, 매일 쏟아지는 미션과 주말 밀착 케어로 직원 한 명 없이 <span className="text-primary bg-blue-100 px-2 py-0.5 rounded-md inline-block mt-2">&apos;진짜 내 웹사이트&apos;</span>를 완성합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Curriculum Timeline */}
+      <section className="w-full bg-white py-20 md:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl mb-16">
+            1기 전용 1주일 단기 완성 로드맵 🗓️
+          </h2>
+          
+          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-200 before:to-transparent">
+            {/* Day 1 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 font-bold text-lg">
+                1
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="bg-blue-100 text-primary text-xs font-bold px-2.5 py-1 rounded-md">1일차</span>
+                  <h3 className="font-bold text-gray-900 text-lg">AI 기획 및 개발 환경 초기 세팅</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">코딩 전 필수! 토큰 비용을 아끼는 프롬프트 기획법 및 시크릿 AI 에이전트 툴 세팅</p>
+              </div>
+            </div>
+
+            {/* Day 2 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 font-bold text-lg">
+                2
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="bg-blue-100 text-primary text-xs font-bold px-2.5 py-1 rounded-md">2일차</span>
+                  <h3 className="font-bold text-gray-900 text-lg">바이브 코딩 실전! 프론트엔드 UI 구축</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">자연어로 명령하여 웹사이트 겉모습 뚝딱 만들고 내 PC에서 미리보기</p>
+              </div>
+            </div>
+
+            {/* Day 3 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 font-bold text-lg">
+                3
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="bg-blue-100 text-primary text-xs font-bold px-2.5 py-1 rounded-md">3일차</span>
+                  <h3 className="font-bold text-gray-900 text-lg">개발자들의 비밀 무기, 저장소 구축</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">전 세계 개발자들의 놀이터 &apos;깃허브(GitHub)&apos; 가입 및 내 웹사이트 코드 안전하게 업로드하기</p>
+              </div>
+            </div>
+
+            {/* Day 4 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 font-bold text-lg">
+                4
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="bg-blue-100 text-primary text-xs font-bold px-2.5 py-1 rounded-md">4일차</span>
+                  <h3 className="font-bold text-gray-900 text-lg">내 웹사이트를 전 세계에 배포하기</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">비용 0원! Vercel 클라우드 호스팅을 이용해 실제 인터넷 URL로 라이브 연결하기</p>
+              </div>
+            </div>
+
+            {/* Day 5 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 font-bold text-lg">
+                5
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="bg-blue-100 text-primary text-xs font-bold px-2.5 py-1 rounded-md">5일차</span>
+                  <h3 className="font-bold text-gray-900 text-lg">최종 프로젝트 완성 및 제출 챌린지</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">완성된 나만의 웹사이트 URL 인증 및 AI 에이전트 매니저 활용 꿀팁</p>
+              </div>
+            </div>
+
+            {/* Weekend */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-gray-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 font-bold text-sm">
+                주말
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-gray-800 border border-gray-700 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="bg-gray-700 text-white text-xs font-bold px-2.5 py-1 rounded-md">토/일</span>
+                  <h3 className="font-bold text-white text-lg">복습 및 비밀 카톡방 집중 Q&A</h3>
+                </div>
+                <p className="text-gray-300 leading-relaxed text-sm">막혔던 부분 완벽 해결! 챌린지 이후 나홀로 수익화 파이프라인 구축을 위한 방향성 제시</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Final CTA & Benefits */}
+      <section className="w-full bg-blue-50 py-20 md:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-12 leading-tight">
+            비개발자도 일주일이면 충분합니다.<br />지금 바로 1기에 합류하세요.
+          </h2>
+          
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-blue-100 mx-auto relative overflow-hidden">
+            {/* Top gradient bar */}
+            <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-primary to-blue-400"></div>
+            
+            <div className="mb-10 space-y-5">
+              <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-5 py-2 text-sm font-bold text-red-600">
+                🚨 참여 인원 : 선착순 딱 15명
+              </div>
+              <div className="text-gray-700 font-medium bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                <span className="block text-primary font-bold mb-2 text-lg">💡 수강생 특별 혜택</span>
+                <p className="text-gray-800 tracking-tight">비밀 카톡방 밀착 멘토링 &amp; 평생 소장 실습 가이드 제공</p>
+              </div>
+            </div>
+
+            <div className="mb-10">
+              <div className="flex items-center justify-center space-x-3 mb-3">
+                <span className="text-xl text-gray-400 line-through font-medium">299,000원</span>
+                <span className="text-sm font-bold px-3 py-1 bg-red-100 text-red-600 rounded-full tracking-wide">67% 할인</span>
+              </div>
+              <div className="text-5xl md:text-6xl font-extrabold text-red-600 flex items-baseline justify-center">
+                99,000<span className="text-xl md:text-2xl font-bold text-red-600 ml-1">원</span>
+              </div>
+            </div>
+
+            <Link 
+              href="/premium"
+              className="w-full max-w-md mx-auto flex items-center justify-center py-5 border border-transparent text-xl font-bold rounded-2xl text-white bg-red-600 hover:bg-red-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              1기 챌린지 신청하기 (99,000원)
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
