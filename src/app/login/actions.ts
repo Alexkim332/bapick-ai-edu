@@ -37,15 +37,14 @@ export async function signup(formData: FormData) {
     redirect('/login?tab=signup&errorMessage=' + encodeURIComponent(error.message))
   }
 
-  // Assuming email confirmations are turned ON in Supabase config
   revalidatePath('/', 'layout')
-  redirect('/login?success=true')
+  redirect('/')
 }
 
 export async function logout() {
   const supabase = await createClient()
   await supabase.auth.signOut()
-  
+
   revalidatePath('/', 'layout')
   redirect('/login')
 }
